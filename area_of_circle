@@ -1,9 +1,0 @@
-import math
-def area_of_circle(r:float)-> float:
-    # area of circle = pi * r^2
-    if r >= 0:
-        pi = math.pi
-        area_of_circle = pi * r**2
-        return area_of_circle
-    else:
-        return "invalid radius"
