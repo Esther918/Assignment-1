@@ -1,7 +1,0 @@
-def calculate_kinetic_energy(mass:float, velocity:float)-> float:
-    # KE formula: KE = 0.5 * m * v^2
-    if mass >= 0:
-        kinetic_energy = 0.5 * mass * velocity**2
-        return kinetic_energy
-    else:
-        return "Mass has to be greater than zero."
