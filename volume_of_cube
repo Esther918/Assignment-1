@@ -1,7 +1,0 @@
-def volume_of_cube(a:float)-> float:
-    # volume of cube = side length^3
-    if a >= 0:
-        volume_of_cube = a**3
-        return volume_of_cube
-    else:
-        return "invalid length"
