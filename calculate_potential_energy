@@ -1,9 +1,0 @@
-def calculate_potential_energy(mass:float, height:float)-> float:
-    # U formula: U = m * g * h
-    if mass >= 0 and height >= 0:
-        potential_energy = mass * 9.81 * height
-        return potential_energy
-    elif mass < 0:
-        return "Mass has to be greater than zero."
-    else:
-        return "invalid height."
