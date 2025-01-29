@@ -2,19 +2,19 @@ from bisection_solver import bisection_method
 
 def test_bisection_method():
 
-    # Test 1: Root of x^2 - 4 in [0,5]
+    # Test 1
     f1 = lambda x: x**2 - 4
     root1 = bisection_method(f1, 0, 5, tol=1e-6)
     assert abs(root1 - 2) < 1e-6, "Test 1 failed"
     print("Test 1 passed")
 
-    # Test 2: Root of x^3 - 6x^2 + 11x - 6 in [0, 2.5]
-    f = lambda x: x**3 - 6*x**2 + 11*x - 6  # Roots at x=1,2,3
-    root = bisection_method(f, 1.5, 2.5, tol=1e-6)
-    assert abs(root - 2) < 1e-6, "Test 2 failed"
+    # Test 2
+    f2 = lambda x: x**3 - 6*x**2 + 11*x - 6
+    root2 = bisection_method(f2, 1.5, 2.5, tol=1e-6)
+    assert abs(root2 - 2) < 1e-6, "Test 2 failed"
     print("Test 2 passed")
 
-    # Test 3: No root in the interval [-2, 2] for x^2 + 1
+    # Test 3
     f3 = lambda x: x**2 + 1  # No real root
     try:
         bisection_method(f3, -2, 2)
@@ -22,14 +22,14 @@ def test_bisection_method():
     except ValueError:
         print("Test 3 passed")
 
-    # Test 4: Invalid interval (a == b)
+    # Test 4 (a == b)
     try:
         bisection_method(f1, 3, 3)
         assert False, "Test 4 failed (Expected ValueError)"
     except ValueError:
         print("Test 4 passed")
 
-    # Test 5: f(a) and f(b) have same signs
+    # Test 5 f(a) and f(b) have same signs
     try:
         bisection_method(f1, 3, 5)  # f(3) and f(5) are both positive
         assert False, "Test 5 failed (Expected ValueError)"
