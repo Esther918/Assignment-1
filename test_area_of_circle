@@ -1,0 +1,10 @@
+import numpy as np
+import area_of_circle as area
+
+def test_area_r():
+    r = 5
+    assert np.isclose(area.area_of_circle(r), 78.53981633974483)
+    r = 100.0
+    assert np.isclose(area.area_of_circle(r), 31415.92653589793)
+    r = -5.0
+    assert np.isclose(area.area_of_circle(r), "invalid radius")
