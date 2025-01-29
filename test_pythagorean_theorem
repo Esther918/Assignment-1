@@ -1,0 +1,16 @@
+import numpy as np
+import pythagorean_theorem as py
+
+def test_pythagorean_a_b():
+    a = 3
+    b = 4
+    assert np.isclose(py.find_hypotenuse(a, b), 5)
+    a = 5.0
+    b = 12.0
+    assert np.isclose(py.find_hypotenuse(a, b), 13.0)
+    a = 7.00
+    b = 24.00
+    assert np.isclose(py.find_hypotenuse(a, b), 25.00)
+    a = 1.0
+    b = 1.0
+    assert np.isclose(py.find_hypotenuse(a, b), 1.41421356)
