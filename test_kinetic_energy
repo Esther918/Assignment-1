@@ -1,0 +1,13 @@
+import numpy as np
+import kinetic_energy as ke
+
+def test_ke_m_v():
+    m = 5
+    v = 20
+    assert np.isclose(ke.calculate_kinetic_energy(m, v), 1000)
+    m = 1.2
+    v = 10.0
+    assert np.isclose(ke.calculate_kinetic_energy(m, v), 60.0)
+    m = 300.00
+    v = -1.5
+    assert np.isclose(ke.calculate_kinetic_energy(m, v), 337.50)
