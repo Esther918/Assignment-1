@@ -1,0 +1,10 @@
+import numpy as np
+import volume_of_cube as cube
+
+def test_cube_a():
+    a = 5
+    assert np.isclose(cube.volume_of_cube(a), 125)
+    a = 3.0
+    assert np.isclose(cube.volume_of_cube(a), 27.0)
+    a = 10.5
+    assert np.isclose(cube.volume_of_cube(a), 1157.6)
