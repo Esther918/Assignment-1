@@ -1,9 +1,0 @@
-import math
-def find_hypotenuse(a:float, b:float)-> float:
-    # pythagorean theorem : a^2 + b^2 = c^2
-    if a >= 0 and b >= 0:
-        c_square = a**2 + b**2
-        hypotenuse = math.sqrt(c_square)
-        return hypotenuse
-    else:
-        return "invalid lateral"
