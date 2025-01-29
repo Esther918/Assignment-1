@@ -6,7 +6,7 @@ def bisection_method(f, a, b, tol=1e-6, max_iter=100):
     until it is found within a tolerance.
 
     Parameters:
-    f (function): The function for which the root is sought.
+    f: Function
     a (float): The lower bound of the interval.
     b (float): The upper bound of the interval.
     tol (float): The tolerance for stopping condition (default: 1e-6).
