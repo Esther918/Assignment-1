@@ -1,15 +1,22 @@
+After downloading the folder, you may start running the code.
 First, set up a conda environment:
     conda create --name bisection-method-env python=3.12
+
 Activate the environment:
     conda activate bisection-method-env
+
 Double check that python is version 3.12 in the environment:
     python --version
+
 Ensure that pip is using the most up to date version of setuptools:
     pip install --upgrade pip setuptools wheel
+
 Create an editable install of the bisection method code :
     pip install -e .
+
 Test that the code is working with pytest:
     pytest -v --cov=bisectionmethod --cov-report term-missing
+
 To run the code with pytest:
     pytest -v
     
