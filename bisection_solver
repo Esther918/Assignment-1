@@ -1,3 +1,4 @@
+#
 def bisection_method(f, a, b, tol=1e-6, max_iter=100):
     """
     Find a root of the function f using the bisection method.
