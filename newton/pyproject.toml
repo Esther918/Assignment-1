@@ -5,7 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "newton"
 version = "0.1.0"
-description = "A simple implementation of newton's method"
+description = "Implementation of newton's method"
+requires-python = ">=3.9"
 dependencies = [
     "matplotlib==3.10.0",
     "numpy==1.26.4",
