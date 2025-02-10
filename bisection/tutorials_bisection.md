@@ -1,29 +1,40 @@
 After downloading the folder, you may start running the code.
 
 First, set up a conda environment:
-    >>>conda create --name bisection-method-env python=3.12
-
+```bash
+conda create --name bisection-method-env python=3.12
+```
 Activate the environment:
-    >>>conda activate bisection-method-env
-
+```bash
+conda activate bisection-method-env
+```
 Double check that python is version 3.12 in the environment:
-    >>>python --version
-
+```bash
+python --version
+```
 Ensure that pip is using the most up to date version of setuptools:
-    >>>pip install --upgrade pip setuptools wheel
-
+```bash
+pip install --upgrade pip setuptools wheel
+```
 Ensure pyproject.toml exists and install the package:
 If pyproject.toml is present, run:
-    >>>pip install -e .
+```bash
+pip install -e .
+```
 Note: make sure you are in the project root directory and that pyproject.toml exists.
 Install pytest and pytest-cov:
 (If pytest is not found, install it manually):
-    >>>pip install pytest pytest-cov
+```bash
+pip install pytest pytest-cov
+```
 Test that the code is working with pytest:
-    >>>PYTHONPATH=. pytest --cov=bisection tests/
+```bash
+PYTHONPATH=. pytest --cov=bisection tests/
+```
 To run the test:
-    >>>python tests/test_bisection.py
-
+```bash
+python tests/test_bisection.py
+```
     
 
 
