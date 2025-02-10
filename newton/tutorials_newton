@@ -13,5 +13,7 @@ Note: make sure you are in the project root directory and that pyproject.toml ex
 Install pytest and pytest-cov:
 (If pytest is not found, install it manually):
     pip install pytest pytest-cov
-Run Tests:
+Test that the code is working with pytest:
     PYTHONPATH=. pytest --cov=newton tests/
+To run the test:
+    python tests/test_newton.py
