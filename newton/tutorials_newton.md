@@ -14,6 +14,9 @@ Ensure that pip is using the most up to date:
 ```bash
 pip install --upgrade pip setuptools wheel
 ```
+```bash
+python -m pip install --upgrade pip
+```
 Ensure pyproject.toml exists and install the package:
 If pyproject.toml is present, run:
 ```bash
