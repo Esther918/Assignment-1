@@ -1,3 +1,4 @@
+# Newton's Method
 Set up a conda environment:
 ```bash
 conda create --name newtons-method-env python=3.12
