@@ -9,7 +9,7 @@ authors = [
   { name="Esther Lin", email="lin1609@bu.edu" },
 ]
 description = "Implementation of newton's method"
-readme = "tutorials_newton.md"
+readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
