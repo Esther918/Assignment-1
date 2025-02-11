@@ -31,7 +31,7 @@ jobs:
         run: pip install pytest pytest-cov
 
       - name: Run tests
-        run: pytest --cov=newton --cov-report=xml
+        run: PYTHONPATH=. pytest --cov=newton
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v4
