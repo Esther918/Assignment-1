@@ -27,7 +27,3 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/Esther918/Assignment1.git"
 Issues = "https://github.com/Esther918/Assignment1.git"
-
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["newton*"]
