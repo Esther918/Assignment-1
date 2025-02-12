@@ -1,4 +1,4 @@
-from newton_solver import newton_method
+from newton import newton_method
 import numpy as np
 import math
 
