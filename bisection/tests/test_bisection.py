@@ -3,8 +3,7 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from bisection_solver import bisection_method
-from bisection_solver import bisection_method as bisection_method
+from bisection.bisection_solver import bisection_method
 import pytest
 
 def test_root():
