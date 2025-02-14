@@ -31,12 +31,13 @@ jobs:
 
       - name: Install test dependencies
         run: pip install numpy pytest pytest-cov
+
+      # - name: Install Bisection package
+      #   run: pip install -e ./bisection
         
       - name: Install Newton package
         run: pip install -e ./newton
 
-      # - name: Install Bisection package
-      #   run: pip install -e ./bisection
 
       - name: Install ElastoplasticModel package
         run: pip install -e ./ElastoplasticModel
@@ -44,9 +45,9 @@ jobs:
       - name: Run tests with coverage
         run: |
           pytest --cov=newton --cov-report=xml
-          # pytest --cov=bisection --cov-report=xml
           pytest --cov=ElastoplasticModel --cov-report=xml
-
+  # pytest --cov=bisection --cov-report=xml
+  
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v4
         with:
