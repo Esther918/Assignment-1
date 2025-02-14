@@ -1,4 +1,8 @@
-from nnewton import newton_method
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from newton.newton import newton_method
 import numpy as np
 import math
 
