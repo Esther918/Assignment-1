@@ -2,34 +2,34 @@ from newton import newton_method
 import numpy as np
 import math
 
-#Run examples
-# Example 1
-f1 = lambda x: x**2 - 9
-root1 = newton_method(f1, 1.0)
-print(f"Root: {root1}")  # Expected root to be approximately 3
+def test_newton_method():
+    # Test 1: Quadratic
+    f1 = lambda x: x**2 - 4
+    root1 = newton_method(f1, 1.0, tol=1e-6)
+    assert abs(root1 - 2) < 1e-6, "Test 1 failed"
+    print("Test 1 passed")
 
-# Example 2
-f2 = lambda x: np.log(x) - 1
-root2 = newton_method(f2, 0.5, tol=1e-6)
-print(f"Root: {root2}")  # Expected root to be e (approximately 2.718)
+    # Test 2: Cubic
+    f2 = lambda x: x**3 - 8
+    root2 = newton_method(f2, 1.5, tol=1e-6)
+    assert abs(root2 - 2) < 1e-6, "Test 2 failed"
+    print("Test 2 passed")
 
-# Example 3
-f3 = lambda x: x**5 - x - 1 
-root3 = newton_method(f3, 1.5, tol=1e-6)
-print(f"Root: {root3}")  # Expected root to be approximately 1.167
+    # Test 3: No real root for x^2 + 1
+    f3 = lambda x: x**2 + 1
+    try:
+        newton_method(f3, 1.0)
+        assert False, "Test 3 failed (Expected ValueError)"
+    except ValueError:
+        print("Test 3 passed")
 
-# Example 4
-# Free fall motion. Formula: h - 0.5 * g * t^2
-g = 9.81
-h = 50
-f4 = lambda t: h - 0.5 * g * t**2  
-root4 = newton_method(f4, 3.0, tol=1e-6)  
-print(f"It takes {root4} seconds to hit the ground")  # Expected answer: approximately 3.193
+    # Test 4: Derivative too close to zero
+    f4 = lambda x: x**3
+    try:
+        newton_method(f4, 0.0)
+        assert False, "Test 4 failed (Expected ValueError)"
+    except ValueError:
+        print("Test 4 passed")
 
-# Example 5
-# Oscillating spring. Formula: (k/m)^1/2 = w
-m = 2 
-k = 50
-f5 = lambda omega: omega - math.sqrt(k / m) 
-root5 = newton_method(f5, 1.0, tol=1e-6) 
-print(f"Angular frequency: {root5} rad/s")  # Expected answer: approximately 5
+    print("All tests passed")
+
