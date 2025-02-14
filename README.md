@@ -31,11 +31,15 @@ pip install pytest pytest-cov
 ```
 Test that the code is working with pytest:
 ```bash
-PYTHONPATH=. pytest --cov=newton tests/
+pytest --cov=newton tests/test_newton
 ```
 To run the test:
 ```bash
-python tests/test_newton.py
+pytest -v
+```
+Run examples:
+```bash
+python tests/examples.py
 ```
 # Run examples
 
