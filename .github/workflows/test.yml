@@ -30,7 +30,7 @@ jobs:
         run: pip install -e .
 
       - name: Install test dependencies
-        run: pip install pytest pytest-cov
+        run: pip install numpy pytest pytest-cov
 
       - name: Run tests with coverage
         run: pytest --cov=elastoplastic --cov-report=xml
