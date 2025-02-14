@@ -150,4 +150,6 @@ E = 200e3
 
 Y_0 = 250  
 
-H = 1000   
+H = 1000
+
+![Stress-Strain Curve](stress_strain_curve.png)
