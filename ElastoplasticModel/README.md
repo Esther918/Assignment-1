@@ -152,4 +152,4 @@ Y_0 = 250
 
 H = 1000
 
-![Stress-Strain Curve](stress_strain_curve.png)
+![Stress-Strain Curve](images/stress_strain_curve.png)
