@@ -37,3 +37,7 @@ To run the test:
 ```bash
 pytest -v
 ```
+Run examples:
+```bash
+python tests/examples.py
+```
