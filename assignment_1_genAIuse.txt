@@ -1,0 +1,4 @@
+ChatGPT and Deepseek were used in this assigmnent. 
+I used ChatGPT to generate more ideas for examples in the warm-up section.
+Deepseek is used for solving the issues related to workflows in GitHub.
+Deepseek helped with debugging my part 2 solver and improve my coverage in part 2.
