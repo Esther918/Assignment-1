@@ -1,23 +1,50 @@
 import numpy as np
-import pytest
 from elastoplastic import isotropic_hardening, kinematic_hardening
 
 # Test input validation
 def test_isotropic_hardening_invalid_input():
-    with pytest.raises(ValueError):
-        isotropic_hardening(0.1, 100, 0.01, -1, 200, 100) 
-    with pytest.raises(ValueError):
-        isotropic_hardening(0.1, 100, 0.01, 200, -1, 100)  
-    with pytest.raises(ValueError):
-        isotropic_hardening(0.1, 100, 0.01, 200, 200, -1) 
+    try:
+        isotropic_hardening(0.1, 100, 0.01, -1, 200, 100)  # E <= 0
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for E <= 0")
+
+    try:
+        isotropic_hardening(0.1, 100, 0.01, 200, -1, 100)  # Y_0 <= 0
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for Y_0 <= 0")
+
+    try:
+        isotropic_hardening(0.1, 100, 0.01, 200, 200, -1)  # H < 0
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for H < 0")
 
 def test_kinematic_hardening_invalid_input():
-    with pytest.raises(ValueError):
-        kinematic_hardening(0.1, 100, 0.01, 0, -1, 200, 100)  
-    with pytest.raises(ValueError):
-        kinematic_hardening(0.1, 100, 0.01, 0, 200, -1, 100)  
-    with pytest.raises(ValueError):
-        kinematic_hardening(0.1, 100, 0.01, 0, 200, 200, -1)  
+    try:
+        kinematic_hardening(0.1, 100, 0.01, 0, -1, 200, 100)  # E <= 0
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for E <= 0")
+
+    try:
+        kinematic_hardening(0.1, 100, 0.01, 0, 200, -1, 100)  # Y_0 <= 0
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for Y_0 <= 0")
+
+    try:
+        kinematic_hardening(0.1, 100, 0.01, 0, 200, 200, -1)  # H < 0
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for H < 0")
 
 # Ｔest isotropic hardening model in elastic state
 def test_isotropic_hardening_elastic():
@@ -93,3 +120,4 @@ def test_negative_strain():
     assert np.isclose(new_stress, -200)     
     assert np.isclose(new_epsilon_p, 0)     
     assert np.isclose(new_alpha_n, 0)   
+ 
